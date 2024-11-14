@@ -1,0 +1,55 @@
+print ('welcome to the change calculator, you can use this program to see if you can afford something and see if you get any change back.')
+
+validInput = False
+while validInput == False:
+  cost = input('how much is your bill?\n')
+  payed = input('how much did you pay?\n')
+  #asks for how much you payed and how much the stuff you bought costs
+  try:
+    costConverted = float(cost)
+    payedConverted = float(payed)
+    validInput = True
+  except:
+    print('One or both of your inputs is incorrect. Please try again.')
+
+
+idk = True
+while idk == True:
+  if payed>cost :
+    change=float(payed)-float(cost)
+   #print (change)
+   #this subtracts both numbers so it can calculate the change
+    print ('your change is ' + str(change))     
+    idk = False
+  elif payed<cost:
+    change=float(payed)-float(cost)
+  
+    print ("you can't afford this")
+   #prints out you can afford this if the mmoney you payed was less than te items cost
+    idk = False
+  elif payed == cost:
+    change=float(payed)-float(cost)
+   
+    print ('you payed the exact amount that needed to payed which means you will not get any change back')
+    idk = False
+  # try:
+  #   val = float(cost)
+  # except :
+  #   print ('!invalid answer! please type a number.')
+  #   val = ''
+
+
+
+
+
+
+
+
+
+
+
+
+  #elif cost != float:
+   # change=float(payed)-float(cost)
+  
+ #   print ('please type a number')
